@@ -12,8 +12,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
-    "outDir": "dist",
-    "rootDir": "."
+    // No rootDir. This CLI imports the shared fetch helper from .agents/lib,
+    // which sits above it, and a rootDir of "." would reject that. Nothing here
+    // is ever emitted — the skill runs straight from source under bun, and the
+    // typecheck script is `tsc --noEmit` — so the setting bought nothing.
+    "noEmit": true
   },
   "include": ["src/**/*", "tests/**/*"],
   "exclude": ["node_modules", "dist"]

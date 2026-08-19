@@ -1,4 +1,9 @@
+import { fetchPage, FileReachabilityLog } from "../../../../lib/src/fetch.js"
+
 export const BASE_URL = "https://www.jobindex.dk"
+
+/** Unset means no log, rather than a default path in whatever directory we ran from. */
+const REACHABILITY_LOG = process.env.REACHABILITY_LOG
 
 export function writeError(error: string, code: string): void {
   process.stderr.write(JSON.stringify({ error, code }) + "\n")
@@ -32,37 +37,48 @@ export async function apiFetch<T>(path: string, params?: Record<string, string>)
   throw new Error("API request failed after max retries")
 }
 
+/**
+ * Fetch HTML, falling back to pagefetch when jobindex refuses the plain request.
+ *
+ * **The fallback is inert today.** Measured 2026-08-19: jobindex answers a plain
+ * HTTP request and returns real listings, so this never reaches pagefetch. It is
+ * here because the failure it guards against arrives all at once, and because
+ * `fetchPage` logs every attempt to the reachability log — which is the data
+ * that says whether it has started.
+ *
+ * Unset means disabled: with no PAGEFETCH_URL and PAGEFETCH_TOKEN this is a
+ * plain fetch and nothing else.
+ *
+ * A 404 throws rather than returning "" — on jobindex a missing job is an error
+ * and not an empty page.
+ */
 export async function htmlFetch(url: string): Promise<string> {
-  const maxRetries = 6
-  let delay = 500
-  for (let attempt = 0; attempt <= maxRetries; attempt++) {
-    const response = await fetch(url, {
-      headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; jobindex-cli/1.0)",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "da,en;q=0.9",
-      },
-      redirect: "follow",
-    })
-    if (response.status === 429 || response.status >= 500) {
-      if (attempt === maxRetries) {
-        throw new Error(`API request failed: ${response.status} ${response.statusText}`)
-      }
-      const jitter = Math.floor(Math.random() * 500)
-      await new Promise((resolve) => setTimeout(resolve, delay + jitter))
-      delay = Math.min(delay * 2, 5000)
-      continue
-    }
-    if (response.status === 404) {
-      throw new Error(`Job not found`)
-    }
-    if (!response.ok) {
-      throw new Error(`API request failed: ${response.status} ${response.statusText}`)
-    }
-    return response.text()
+  const result = await fetchPage(url, {
+    source: "jobindex-search",
+    // A Danish board. The language header is not decoration: it decides which
+    // listings come back.
+    headers: {
+      "user-agent": "Mozilla/5.0 (compatible; jobindex-cli/1.0)",
+      "accept-language": "da,en;q=0.9",
+    },
+    retries: 6,
+    log: REACHABILITY_LOG ? new FileReachabilityLog(REACHABILITY_LOG) : undefined,
+  })
+
+  if (result.code === "not_found") throw new Error("Job not found")
+
+  if (!result.ok || result.content === null) {
+    throw new Error(
+      result.blocked
+        ? `jobindex.dk refused the request (${result.blocked}${result.code ? `: ${result.code}` : ""})`
+        : `API request failed: ${result.status ?? result.code ?? "no response"}`,
+    )
   }
-  throw new Error("Request failed after max retries")
+
+  return result.content
 }
+
+
 
 export interface JobCard {
   id: string

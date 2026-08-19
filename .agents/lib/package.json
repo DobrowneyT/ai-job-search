@@ -1,0 +1,15 @@
+{
+  "name": "@jobsearch/lib",
+  "version": "0.1.0",
+  "description": "Shared fetch helper carrying the pagefetch fallback seam and the reachability log. Zero runtime dependencies.",
+  "type": "module",
+  "scripts": {
+    "test": "bun test --timeout 30000",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/bun": "latest"
+  }
+}
