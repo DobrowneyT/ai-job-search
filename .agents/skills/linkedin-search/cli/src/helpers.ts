@@ -17,6 +17,18 @@ const UA =
   "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
 /** Fetch HTML with exponential backoff on 429/5xx. Returns "" on a 404. */
+/**
+ * Deliberately NOT routed through the pagefetch fallback, unlike reed-search,
+ * totaljobs-search and jobindex-search.
+ *
+ * `linkedin.com/robots.txt` is a bare `Disallow: /`, and pagefetch enforces
+ * robots.txt by design — so wiring the fallback in here would not add a
+ * capability, it would *remove* one: every call would come back
+ * `blocked_robots` where this plain path currently returns listings.
+ *
+ * That is the whole reason the seam is opt-in per skill. Do not "finish the
+ * job" by adding it here.
+ */
 export async function htmlFetch(url: string): Promise<string> {
   const maxRetries = 6
   let delay = 500
