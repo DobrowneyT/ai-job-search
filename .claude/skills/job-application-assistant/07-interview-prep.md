@@ -35,6 +35,70 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 <!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 
+## STAR Candidates (Complete Manually)
+
+<!-- Populated by /setup from documents/. These are stubs, not full answers - fill in S/T/A/R before using in an interview. -->
+
+### Bot-Hoven capstone: ROS2 hardware interface for 20+ actuators
+**Source:** CV / Independent Projects - University capstone
+**What happened:** Architected a ROS2 hardware interface layer supporting 20+ actuators with sub-millisecond timing precision for an autonomous piano-playing robot, and implemented batch communication protocols that cut I2C transaction overhead by 60%.
+**Why it matters:** Strong answer for technical depth, systems design, and real-time/concurrency questions.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### PTx Trimble manifest-driven system updater
+**Source:** CV / Professional Experience - PTx Trimble
+**What happened:** Extended and hardened a bespoke system updater that coordinates Debian package updates, Docker image upgrades, embedded controller firmware, and peripheral configuration across a fleet, via a manifest file, without full image rebuilds.
+**Why it matters:** Strong answer for reliability engineering, complexity management, and "describe a system you improved" questions.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### MacDon CAN Trace Plotter and Analyzer
+**Source:** CV / Independent Projects - built during MacDon internship
+**What happened:** Built a PyQt6 desktop app to visualize CAN bus traces across multiple file formats, with a drag-and-drop UI and DBC database integration, delivered as a production-ready executable that reduced manual diagnostic workflows.
+**Why it matters:** Strong answer for self-initiated tooling, "went beyond what was asked" and ownership/initiative questions.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### UManitoba magnetic field sensor PCB design
+**Source:** CV / Professional Experience - Undergraduate Research Assistant
+**What happened:** Designed full PCB schematics and layouts for a prototype and final-production magnetic field sensor, iterating through multiple hardware revisions from bench testing through final qualification.
+**Why it matters:** Strong answer for hardware iteration, validation methodology, and "how do you handle a design that doesn't work the first time" questions.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### UMES $20,000 sponsorship strategy
+**Source:** CV / Professional Experience - UMES (Vice-Stick Corporate Relations)
+**What happened:** Implemented a strategy that secured $20,000 in sponsorship funding and built relationships with industry professionals.
+**Why it matters:** The one clearly business/stakeholder-facing achievement on file - useful for questions about influence, communication, or work outside a pure technical track.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Career pivot: international ballet to embedded engineering
+**Source:** LinkedIn Experience (Royal Winnipeg Ballet, Lviv National Opera and Ballet, and others, 2008-2020) + CV
+**What happened:** Built a professional performing career across multiple countries (Canada, Ukraine) before transitioning into Computer Engineering and embedded systems.
+**Why it matters:** Strong "tell me about yourself" opener and a genuine answer to "tell me about a major change in direction" - demonstrates discipline, adaptability, and a real narrative arc. Needs framing work to land well in a technical interview without sounding like a non-sequitur.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
 ## Common Tough Questions
 
 ### "Why did you leave [previous company]?"

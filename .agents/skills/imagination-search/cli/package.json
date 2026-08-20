@@ -1,0 +1,20 @@
+{
+  "name": "imagination-cli",
+  "version": "1.0.0",
+  "description": "CLI for searching jobs on Imagination Technologies' public careers site (PageUp People jobs.json feed) — no authentication, zero runtime dependencies.",
+  "type": "module",
+  "main": "src/cli.ts",
+  "bin": {
+    "imagination-search": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "test": "bun test --timeout 30000",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/bun": "latest"
+  }
+}

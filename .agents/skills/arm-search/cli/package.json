@@ -1,0 +1,20 @@
+{
+  "name": "arm-cli",
+  "version": "1.0.0",
+  "description": "CLI for searching jobs on Arm's own careers site (careers.arm.com) — global listings across Software Engineering, Hardware Engineering, and Silicon. No authentication, zero runtime dependencies.",
+  "type": "module",
+  "main": "src/cli.ts",
+  "bin": {
+    "arm-search": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "test": "bun test --timeout 30000",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/bun": "latest"
+  }
+}

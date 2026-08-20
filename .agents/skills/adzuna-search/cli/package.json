@@ -1,0 +1,20 @@
+{
+  "name": "adzuna-cli",
+  "version": "1.0.0",
+  "description": "CLI for searching UK jobs via Adzuna's official public Jobs API — zero runtime dependencies, requires a free ADZUNA_APP_ID/ADZUNA_APP_KEY.",
+  "type": "module",
+  "main": "src/cli.ts",
+  "bin": {
+    "adzuna-search": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "test": "bun test --timeout 30000",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/bun": "latest"
+  }
+}

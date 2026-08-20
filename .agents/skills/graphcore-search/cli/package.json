@@ -1,0 +1,20 @@
+{
+  "name": "graphcore-cli",
+  "version": "1.0.0",
+  "description": "CLI for searching open roles on Graphcore's public Greenhouse job board — zero runtime dependencies, no authentication required.",
+  "type": "module",
+  "main": "src/cli.ts",
+  "bin": {
+    "graphcore-search": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "test": "bun test --timeout 30000",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/bun": "latest"
+  }
+}

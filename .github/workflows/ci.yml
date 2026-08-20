@@ -92,14 +92,32 @@ jobs:
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
       - name: Compile CV example (lualatex)
+        # Some forks (this one included) delete cv/main_example.tex entirely
+        # rather than personalize it in place, to avoid tracking a personal CV
+        # in a file .gitignore would otherwise catch (see
+        # 05-cv-templates.md's active-template note). Fall back to compiling
+        # that fork's own active template with its documented engine, so
+        # "compile success asserted everywhere" still holds for forks that
+        # took this path instead of skipping the check outright.
         run: |
-          cd cv
-          lualatex -interaction=nonstopmode main_example.tex
-          test -f main_example.pdf
-          if grep -q '^!' main_example.log; then
-            echo '::error::lualatex reported errors compiling cv/main_example.tex'
-            grep -A3 '^!' main_example.log
-            exit 1
+          if [ -f cv/main_example.tex ]; then
+            cd cv
+            lualatex -interaction=nonstopmode main_example.tex
+            test -f main_example.pdf
+            if grep -q '^!' main_example.log; then
+              echo '::error::lualatex reported errors compiling cv/main_example.tex'
+              grep -A3 '^!' main_example.log
+              exit 1
+            fi
+          else
+            cd templates/cv/tristan-overleaf
+            pdflatex -interaction=nonstopmode template.tex
+            test -f template.pdf
+            if grep -q '^!' template.log; then
+              echo '::error::pdflatex reported errors compiling templates/cv/tristan-overleaf/template.tex'
+              grep -A3 '^!' template.log
+              exit 1
+            fi
           fi
       - name: Compile cover letter example (xelatex)
         run: |

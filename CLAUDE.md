@@ -1,10 +1,9 @@
-# Job Application Assistant for [YOUR_NAME]
+# Job Application Assistant for Tristan Dobrowney
 
 <!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Tristan Dobrowney, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -16,68 +15,76 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 <!-- This section is auto-populated by /setup. You can also fill it in manually. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Tristan Dobrowney
+- **Location:** Winnipeg, Manitoba, Canada (currently). Relocating to England indefinitely starting January 2027 - initially Liverpool/Manchester (alongside a spouse's ~6-month student exchange in Liverpool), with possible relocation elsewhere in England after ~6 months. This is a permanent move, not a temporary one - CVs and cover letters may state outright that he is relocating to England. Dual Canada/UK citizen.
+- **Languages:** English (native), Ukrainian (conversational), Russian (conversational) - both from living and working in Lviv, Ukraine (2015-2018)
+- **Status:** Employed full-time (Embedded Firmware Engineer, PTx Trimble)
+- **LinkedIn headline:** "Embedded Systems and Linux Developer"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **B.Sc. in Computer Engineering (Co-op), With Distinction** (Sep 2020-Feb 2026) - University of Manitoba
+  - Capstone: Bot-Hoven, an autonomous piano-playing robot (Group Design Project, Parts A & B)
+  - Topics: real-time embedded systems, digital systems design, VLSI design, modern computing systems, microprocessor interfacing, signal processing, parallel processing, robotics, control systems, applied computational intelligence. VLSI design and computer architecture were a deliberate coursework focus alongside embedded systems (not a formally declared specialization).
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+<!-- Current + most relevant roles. Full 14-entry work history (including the international ballet career and Rusalka leadership role) is in .claude/skills/job-application-assistant/01-candidate-profile.md -->
+- **Embedded Firmware Engineer** (January 2026 - Present) - **PTx Trimble** (Winnipeg, MB)
+  - Firmware for STM32 F2/F4/F7 microcontrollers and Linux-based NVIDIA Jetson controllers (Outrun autonomous tractor retrofit platform)
+  - USB and automotive Ethernet support for a new STM32 controller
+  - Extended a manifest-driven fleet-wide system updater coordinating Debian packages, Docker images, and embedded firmware
+  - Contributed to custom Linux kernel development and systemd service management for Jetson-based controllers
+- **Controls Application Engineer Intern** (May 2024 - December 2025) - **MacDon Industries Ltd.** (Winnipeg, MB)
+  - CAN/J1939/ISOBUS systems integration for farming implements, tractors, and windrowers
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Embedded firmware (C, C++, STM32, FreeRTOS), embedded Linux (kernel, U-Boot, UEFI, Kconfig/defconfig)
+- **Secondary:** FPGA/Verilog, PCB design (KiCAD, Altium), Python, C#, Java
+- **Domain:** Low-level communication protocols (CAN, J1939, ISOBUS, SPI, I2C, USB, Automotive Ethernet), real-time systems, computer architecture/instruction-set design (aspirational - project-level experience so far, not yet professional)
+- **Software:** ROS2, Docker, Git, VS Code, Linux (systemd, custom kernel), MATLAB, LaTeX
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Tech Stewardship Practice Program** - completed (date TBD)
+- **CompTIA A+** - certified (date TBD)
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+No peer-reviewed publications yet.
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- Faculty of Engineering Undergraduate Research Award (2025)
+- IEEE Winnipeg Section 2nd Prize for Capstone Project (2025)
+- Douglas and Beverly Ruth Centenary Award in Engineering (2024 and 2025)
+- Dr. Lotfollah Shafai Bursary in Electrical and Computer Engineering (2024)
+- Anastasia Sawula Prize (2020/2021)
+- Dean's Honour List, Price Faculty of Engineering (2020-Present)
+<!-- Full award list in 01-candidate-profile.md -->
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+<!-- No formal assessment (PI/DISC/Myers-Briggs) exists yet - these are self-described traits and stated preferences, not a scored assessment. Full detail in 02-behavioral-profile.md -->
+- **Systems-level thinker** - motivated by understanding a product's entire pipeline end-to-end to make better design decisions
+- **Teacher/mentor** - has tutored university calculus, chemistry, and engineering/CS topics; run LaTeX workshops; taught within the Rusalka Ukrainian Dance Ensemble role
+- **Leadership/negotiation** - elected Union Representative for the Royal Winnipeg Ballet dancers' collective for 8 years (2008-2016); sat on the negotiating team for 3 successful collective bargaining ratifications with management. Genuine professional leadership/negotiation experience, distinct from engineering-team leadership - frame honestly as that kind of leadership, not as technical project ownership.
+- **Strengths:** Low-level debugging, systems architecture (micro and macro level), comfort in unfamiliar/high-change environments (years of international performing work), resourcefulness/adaptability under a "the show must go on" standard - pivoting in dynamic, volatile, fast-changing environments across multiple countries and cultures, unusually high tolerance for heavy meeting loads
+- **Growth areas:** Not yet formally assessed
+- **Thrives in:** Hybrid work; teams that value technical depth over process; roles with genuine end-to-end ownership
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Low-level debugging and end-to-end systems architecture
+- Communication protocols at the hardware/software boundary (I2C, SPI, CAN, UART)
+- Growing toward kernel development and, eventually, computer architecture / instruction-set design
+- Teaching and mentoring
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- Embedded systems / silicon: Tenstorrent (dream company), Arm, Raspberry Pi, RISC-V-ecosystem companies
+- Industrial/automotive embedded (existing experience base): companies like MacDon, Trimble/PTx
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- No hard deal-breakers identified
+- Strong preference for hybrid work
+- Heavy travel is a friction point, not an automatic disqualifier, if compensation is strong or family travel/support is covered
+- Salary floor: $74,000 CAD (current salary); £40,000 GBP minimum for UK roles (Liverpool/Manchester), reflecting higher cost of living than Winnipeg
 
 ## Repo Structure
-- `cv/` - LaTeX CV variants (moderncv template, banking style)
+- `cv/` - LaTeX CVs generated by `/apply` (`cv/main_<company>.tex`). Active template is a custom XCharter/pdflatex build (`templates/cv/tristan-overleaf/`) - see `.claude/skills/job-application-assistant/05-cv-templates.md`. `documents/cv/main.tex` holds the comprehensive real CV used as the master reference.
 - `cover_letters/` - LaTeX cover letters (custom cover.cls template)
 - `.claude/skills/` - AI skill definitions for the application workflow
 - `.agents/skills/` - Job search CLI tools
@@ -107,7 +114,7 @@ After creating or updating a CV or cover letter, re-read the generated file and 
 - [ ] Nice-to-have requirements are highlighted where there is a match
 
 ### Consistency
-- [ ] CV follows the standard 2-page moderncv/banking format
+- [ ] CV follows the active template (`templates/cv/tristan-overleaf/` - XCharter/pdflatex, not the stock moderncv/banking format) at exactly 2 pages - see `05-cv-templates.md`
 - [ ] Cover letter uses cover.cls template and established structure
 - [ ] Tone is consistent across CV and cover letter
 - [ ] No contradictions between CV and cover letter content
