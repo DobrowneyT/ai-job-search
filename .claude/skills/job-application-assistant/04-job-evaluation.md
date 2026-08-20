@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Embedded firmware (STM32, FreeRTOS), embedded Linux (kernel, U-Boot, UEFI, Kconfig/defconfig), CAN/J1939/ISOBUS and other low-level comms protocols (I2C, SPI, UART, USB), FPGA/Verilog, C/C++, real-time systems
+**Moderate match areas:** Full PCB/hardware design and bring-up (genuinely strong experience from the UManitoba research role, but see Motivation Filter below - not his preferred day-to-day work even where he's qualified); Java (listed as a skill but no bullet demonstrates applied use - see Calibration note above)
+**Weak match areas:** Professional (paid) computer-architecture / instruction-set-design experience and ASIC design-flow tooling - genuine aspiration and project-level exposure (a 16-bit processor designed in the "Modern Computing Systems" course) but not yet professional experience. Acknowledge this gap honestly rather than overstating fit for Computer Architect / ASIC roles.
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Embedded firmware development, real-time systems, hardware-software integration, automotive/industrial embedded (PTx Trimble, MacDon), low-level communication protocols
+**Moderate:** Embedded Linux/kernel work (actively growing at PTx Trimble - U-Boot, UEFI, kernel config), full PCB/hardware bring-up (strong experience, lower motivational fit)
+**Entry-level:** Computer architecture / instruction-set-architecture roles, ASIC/FPGA Design Engineer roles at chip companies - project-level exposure only (16-bit processor coursework project), no professional experience yet
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -63,19 +63,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Move toward roles closer to the hardware/software boundary: kernel development, low-level embedded work, and ideally CPU instruction set architecture / silicon-adjacent engineering (this is what drew the Arm application specifically)
+- Relocate to the UK (Liverpool/Manchester area) starting around January 2027, alongside a spouse's ~6-month student exchange, with a longer-term goal of settling there permanently
+- Near-term (through end of 2026): open to Winnipeg/Canada-based or remote roles that build toward the above, not just any embedded job
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+- Tasks that energize: low-level debugging; end-to-end systems architecture (understanding the full product pipeline to make better design decisions); micro- and macro-level architecture/design work; low-level communication protocols (I2C, SPI, CAN, UART); teaching and mentoring (has run LaTeX workshops, tutored calculus/chemistry/CS/engineering topics at university, and taught within Rusalka)
+- Tasks that drain: working with people who aren't engaged or don't understand the problem (not meetings specifically - heavy meeting loads are explicitly fine); hardware bring-up / PCB-layout-heavy work as the primary focus (has strong experience here from the UManitoba lab role but would rather be writing the real-time firmware/sensor-logging code than doing the board design itself)
+- Non-task factors: hybrid work strongly preferred; heavy travel is a friction point but not an automatic disqualifier if compensation is strong or family travel/support is covered (e.g. flights or a nanny)
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Current salary is $74,000 CAD - treat as an absolute floor for any move. For UK roles (Liverpool/Manchester), minimum target is £40,000 GBP, reflecting higher cost of living than Winnipeg.
+- **Flexibility**: Hybrid work is ideal. Planning a UK relocation around January 2027 (spouse's ~6-month student exchange in Liverpool), with a longer-term goal of settling in the UK permanently. No major hard deal-breakers identified otherwise.
+- **Professional development**: Growth toward kernel development, embedded Linux, and ultimately computer-architecture/instruction-set-design work (dream companies: Tenstorrent, Arm, Raspberry Pi, RISC-V-ecosystem)
 
 ### 6. Salary Benchmark (Optional)
 
@@ -134,6 +134,13 @@ Present the evaluation as:
 - [ ] Checked media for restructuring, growth, or workplace issues
 - [ ] Identified network contacts who may know the team/manager
 ```
+
+## Calibration from Past Applications
+
+<!-- Populated by /setup from documents/applications/. Single data points are labeled as such - not yet confirmed patterns (need 2+ similar outcomes). -->
+
+- **Arm Ltd. - Debugger Software Engineer (Manchester, UK), rejected pre-interview (June 2026), single data point:** The posting required practical Java experience. The candidate's CV lists Java as a skill but no bullet anywhere demonstrates applied Java work - possible signal that a skill listed without concrete supporting evidence may not clear initial screening. Watch for this pattern repeating on future rejections.
+- **Candidate's own reflection on this outcome:** the CV and cover letter should mirror the specific posting's language and emphasized requirements more closely, rather than leading with general embedded-systems framing.
 
 ## Weighting
 - Technical Skills: 30%

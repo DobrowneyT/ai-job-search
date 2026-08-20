@@ -1,0 +1,107 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+
+\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} %%% Test various topsep values to fix vertical spacing errors
+
+% resume starts here
+\begin{document}
+
+% name
+\centerline{\Huge [Your Name]}
+
+\vspace{5pt}
+
+% contact information
+\centerline{\href{mailto:your.email@example.com}{your.email@example.com} | % \href{[your portfolio URL]}{[your portfolio URL]} |
+\href{https://github.com/[your GitHub username]}{github.com/[your GitHub username]}}
+
+\vspace{-10pt}
+
+% profile section
+\section*{Profile}
+[Profile statement - 2-3 sentences tailored to the target role]
+
+\vspace{-6.5pt}
+
+% skills section
+\section*{Skills}
+\textbf{[Skill category 1]:} [Skills list 1] \\
+\textbf{[Skill category 2]:} [Skills list 2] \\
+\textbf{[Skill category 3]:} [Skills list 3] \\
+\textbf{[Skill category 4]:} [Skills list 4]
+
+\vspace{-6.5pt}
+
+% experience section
+\section*{Experience}
+
+\textbf{[Job title],} {[Company]} -- [City, region] \hfill [Start date] -- [End date] \\
+\vspace{-9pt}
+\begin{itemize}
+  \item [Achievement or responsibility 1 - be specific, use numbers where possible]
+  \item [Achievement or responsibility 2]
+  \item [Achievement or responsibility 3]
+\end{itemize}
+
+% repeat the block above for each additional role (newest first)
+
+\vspace{-18.5pt}
+
+% projects section
+\section*{Projects}
+\textbf{[Project name]} \hfill \href{[project URL]}{[project URL text]} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item [Project bullet 1]
+  \item [Project bullet 2]
+  \item [Project bullet 3]
+\end{itemize}
+
+% repeat the block above for each additional project
+
+\vspace{-18.5pt}
+
+% student groups section (optional - delete if not relevant to the role)
+\section*{Student Groups}
+\textbf{[Role title],} {[Organization]} \hfill [Years] \\
+\vspace{-9pt}
+\begin{itemize}
+  \item [Group bullet 1]
+  \item [Group bullet 2]
+\end{itemize}
+
+\vspace{-18.5pt}
+
+% education section
+\section*{Education}
+\textbf{[Institution]} -- [Degree], [Honors] \hfill \textit{[Graduation date]}
+
+% awards section
+\section*{Awards}
+[Award name 1] \hfill [Year 1] \\{}
+[Award name 2] \hfill [Year 2] \\{}
+[Award name 3] \hfill [Year 3]
+
+\end{document}

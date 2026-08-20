@@ -1,5 +1,18 @@
 # CV Templates and Tailoring Guide
 
+<!-- BEGIN ACTIVE-TEMPLATE (managed by /add-template - do not edit by hand) -->
+> **Active template override: `tristan-overleaf`**
+>
+> A custom template is active. Where this block conflicts with the stock guidance below, this block wins. Structural advice below (tailoring, page-budget, cutting rules) still applies.
+>
+> - **Template skeleton:** `templates/cv/tristan-overleaf/template.tex` — use this as the structural reference instead of the stock template
+> - **Manifest:** `templates/cv/tristan-overleaf/TEMPLATE.md` — read this for style rules and known pitfalls before drafting
+> - **Compile with:** `pdflatex` (not the engine named in the stock guidance below); binary lives at `/usr/local/texlive/2026/bin/x86_64-linux/` if not on PATH
+> - **Fonts:** XCharter (TeX-distribution package, no bundled files)
+> - **Page limit:** exactly 2 page(s)
+> - **Output file:** unchanged (`cv/main_<company>.tex`); the template is self-contained — no class or font files to copy
+<!-- END ACTIVE-TEMPLATE -->
+
 <!-- SETUP: Profile statements and section ordering are personalized by running /setup -->
 
 ## Template: LaTeX moderncv (Banking Style)
@@ -8,7 +21,7 @@ All CVs use the moderncv LaTeX package with the "banking" style and "blue" color
 
 **Output file:** `cv/main_<company>.tex`
 **Compile with:** **lualatex** on MiKTeX/TeX Live. pdflatex often fails on modern MiKTeX installs with `fontawesome5` font-expansion errors; lualatex handles the same sources cleanly.
-**Master reference:** `cv/main_example.tex` (comprehensive CV with all competencies, experience, and achievements - use as source when building targeted CVs)
+**Master reference:** `documents/cv/main.tex` (comprehensive CV with all competencies, experience, and achievements - use as source when building targeted CVs). `cv/main_example.tex` does not exist in this fork - it was deliberately left deleted to avoid personal data in a file that `.gitignore` would otherwise track; `01-candidate-profile.md` is the other complete reference.
 
 ### Compile command
 
@@ -106,11 +119,11 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For embedded systems / firmware roles:**
+> Highly motivated Computer Engineering graduate specializing in embedded systems and computer architecture. Experienced in hardware-software integration, instruction set design, and low-level system programming with strong research and development capabilities in computational systems.
 
 **For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+> [YOUR_PROFILE_STATEMENT_TEMPLATE_2 - only one profile statement exists so far (from the single application on file); a second variant for a different role type (e.g. software/tooling-focused, given the Java/C++ emphasis seen in the Arm posting) can be added once you've applied to more roles or want one drafted now]
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.
